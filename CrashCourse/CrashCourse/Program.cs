@@ -122,7 +122,7 @@ namespace CrashCourse
             Person p1 = new Person();
             p1.Firstname="caleb";
             p1.Lastname = "hook";
-            Console.WriteLine(p1.Fullname());
+            Console.WriteLine(p1.Fullname);
             Console.ReadLine();
         }
         //FUNCTIONS DECLARATION
