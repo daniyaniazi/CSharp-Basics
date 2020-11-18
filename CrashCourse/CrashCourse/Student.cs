@@ -23,7 +23,7 @@ namespace CrashCourse
     public class Person
     {
         //Feild names
-        string _idNo = "DEE45G";
+        string _idNo = "DEE45G"; //connot access outside
         public string Firstname
         {
             get;
