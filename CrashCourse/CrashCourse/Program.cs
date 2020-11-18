@@ -8,7 +8,7 @@ namespace CrashCourse
         {
             //Null Variable - we can console it without error
             int? n = null;
-            Console.WriteLine(y);
+            Console.WriteLine(n);
             Console.WriteLine("Hello World!");
             Console.Write(" Write line without newline");
             Console.WriteLine(" Hello Testing!");
@@ -30,11 +30,12 @@ namespace CrashCourse
 
             //TYPE CASTING //
             int a = -34;
-            uint x = 32;
+            uint x1 = 32;
             float b = 34.4F;
             double d = 34.5D;
             decimal e = 5.5M; //decimal is trust worthy with exact precision
             char c = 'c';
+            int charInNum = 'c';
             
             // Console.WriteLine(a);
             // Console.WriteLine(b);
@@ -47,9 +48,27 @@ namespace CrashCourse
             // error -> char c = z;
             // 2. Explicit
             int x = (int)3.5;
+            char letter = (char)977;
+            Console.WriteLine(letter);
             // method casting 
             float varr = Convert.ToInt32(3.66);
-
+            //
+            double dob = double.NaN;
+            Console.WriteLine(double.IsNaN(dob));
+            // STRINGS
+            char[] characters = { 'D', 'a', 'n', 'i', 'y', 'a' };
+            string greeting = new string(characters);
+            Console.WriteLine(greeting);
+            //interpolation
+            Console.WriteLine($"Hello user {greeting}");
+            //property
+            Console.WriteLine(greeting.Length);
+            //Methods
+            Console.WriteLine(greeting.CompareTo("Daniya")); // 0 = same , -1= name comes before , 1= name comes after
+            Console.WriteLine(greeting.IndexOf("an",1));
+            Console.WriteLine(greeting.Remove(1,2)); // remove 2 characte from index 1
+            Console.WriteLine(greeting.Trim()); // remove extra spaces
+            string[] words =greeting.Split( ' ');
             // String Concatenation
             Console.WriteLine("How Many Candies you want !");
             string candies = Console.ReadLine();
@@ -70,6 +89,10 @@ namespace CrashCourse
             Console.WriteLine(5 == 5);
 
             // MATH CLASS//
+            double m = 50.5;
+            Console.WriteLine(Math.Round(m));
+            Console.WriteLine(Math.Ceiling(m));
+            Console.WriteLine(Math.Sign(m)); // -1 for - ,0 for 0, 1 for +
             int max = Math.Max(34, 55); //Min
             double dob = Math.Sqrt(44);
             int abs = Math.Abs(-44);
@@ -95,6 +118,11 @@ namespace CrashCourse
             Console.WriteLine(stud1.marks);
             // private member cannot be accessed directly
             Console.WriteLine(stud1.getRoll());
+            //
+            Person p1 = new Person();
+            p1.Firstname="caleb";
+            p1.Lastname = "hook";
+            Console.WriteLine(p1.Fullname());
             Console.ReadLine();
         }
         //FUNCTIONS DECLARATION
