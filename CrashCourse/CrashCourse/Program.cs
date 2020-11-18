@@ -6,6 +6,9 @@ namespace CrashCourse
     {
         static void Main(string[] args)
         {
+            //Null Variable - we can console it without error
+            int? n = null;
+            Console.WriteLine(y);
             Console.WriteLine("Hello World!");
             Console.Write(" Write line without newline");
             Console.WriteLine(" Hello Testing!");
@@ -20,11 +23,19 @@ namespace CrashCourse
              long whole; -> 8 bytes
              double big; ->8 bytes
              */
+             /*
+             'C' -> Character
+             "C" -> String
+             */
 
             //TYPE CASTING //
-            int a = 34;
+            int a = -34;
+            uint x = 32;
             float b = 34.4F;
             double d = 34.5D;
+            decimal e = 5.5M; //decimal is trust worthy with exact precision
+            char c = 'c';
+            
             // Console.WriteLine(a);
             // Console.WriteLine(b);
             // Console.WriteLine(d);
