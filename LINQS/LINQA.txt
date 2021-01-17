@@ -1,0 +1,12 @@
+LINQ : Language integrated Query
+new query language 
+.net 3.5
+similar to sql
+
+int[] arr={22,33,,44,556,66,22,22,44,44,33,77,65,43,};
+
+using LINQ we can write queries on a wide variety of data source
+
+rom <alias> in <coll \\ ar> [<clauses>] select <alias>
+
+from i in arr where i>40 oderby i select i; 
