@@ -3,7 +3,7 @@
 namespace Delegates
 {
     public delegate int AddNumD(int a, int b);
-    public delegate string SayHelloD(string name);
+    public delegate string SayMessage(string name);
 
     class Program
     {
@@ -15,7 +15,11 @@ namespace Delegates
         {
             return "Hello " + name;
         }
-       static void Main(string[] args)
+        public static string SayBuy(string name)
+        {
+            return "Buy " + name;
+        }
+        static void Main(string[] args)
         {
             
 
@@ -23,11 +27,14 @@ namespace Delegates
             // Creating Instance of delegate 
             AddNumD adel = new AddNumD(p.AddNum);
             // static members
-             SayHelloD sdel = new SayHelloD(SayHello);
+            SayMessage hellomsg = new SayMessage(SayHello);
+            SayMessage buymsg = new SayMessage(SayBuy);
 
             //calling Methods using delegates
+            adel.Invoke(10, 33);
             Console.WriteLine( adel(3,6));
-            Console.WriteLine(sdel("Saniya"));
+            Console.WriteLine(hellomsg("Saniya"));
+            Console.WriteLine(buymsg("Saniya"));
             Console.Read();
         }
     }
