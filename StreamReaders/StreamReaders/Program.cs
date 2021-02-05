@@ -31,7 +31,7 @@ namespace StreamReaders
                     //{
                     //    Console.WriteLine(item); //character by chaarcter
                     //}
-
+                    
                     //string[] names = new string[3];
                     //for (int i =0; i < names.Length; i++)
                     //{
@@ -42,9 +42,11 @@ namespace StreamReaders
                     //    Console.WriteLine(item); 
                     //}
 
-                    string lines = reader.ReadToEnd();
-                    Console.WriteLine(lines);
-                                                                        
+                    if(reader.Peek() > 0)
+                    {
+                        string lines = reader.ReadToEnd();
+                        Console.WriteLine(lines);
+                    }                    
                 }
 
             }
